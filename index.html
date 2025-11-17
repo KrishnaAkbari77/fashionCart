@@ -1,0 +1,271 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Wish - New Collection</title>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;600;700&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: "Montserrat", sans-serif;
+      color: #222;
+      background-color: #ffffff;
+    }
+
+    a {
+      text-decoration: none;
+      color: inherit;
+    }
+
+    /* ===== NAVBAR ===== */
+    .navbar {
+      width: 100%;
+      padding: 18px 70px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      position: fixed;
+      top: 0;
+      left: 0;
+      z-index: 10;
+      background-color: #ffffff;
+    }
+
+    .nav-left {
+      font-family: "Playfair Display", serif;
+      font-size: 28px;
+      letter-spacing: 2px;
+    }
+
+    .nav-center {
+      display: flex;
+      gap: 40px;
+      letter-spacing: 2px;
+      font-size: 12px;
+    }
+
+    .nav-center a {
+      text-transform: uppercase;
+    }
+
+    .nav-right {
+      display: flex;
+      align-items: center;
+      gap: 25px;
+    }
+
+    .search-box {
+      border: 1px solid #eee;
+      padding: 8px 14px;
+      min-width: 260px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      font-size: 12px;
+      text-transform: uppercase;
+      background-color: #fdf4f1;
+    }
+
+    .search-box input {
+      border: none;
+      outline: none;
+      background: transparent;
+      font-size: 12px;
+      width: 100%;
+    }
+
+    .search-box i {
+      font-style: normal;
+      font-size: 14px;
+    }
+
+    .icons {
+      display: flex;
+      align-items: center;
+      gap: 15px;
+      font-size: 14px;
+    }
+
+    .icon-badge {
+      position: relative;
+      font-size: 18px;
+    }
+
+    .icon-badge span {
+      position: absolute;
+      top: -6px;
+      right: -8px;
+      font-size: 9px;
+      background-color: #b57a5b;
+      color: #fff;
+      border-radius: 50%;
+      padding: 2px 4px;
+    }
+
+    .burger {
+      width: 20px;
+      height: 14px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      cursor: pointer;
+    }
+
+    .burger span {
+      height: 2px;
+      width: 100%;
+      background-color: #222;
+    }
+
+    /* ===== HERO SECTION ===== */
+    .hero {
+      margin-top: 80px; /* space for fixed navbar */
+      height: calc(100vh - 80px);
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-image {
+      width: 100%;
+      height: 100%;
+      background-image: url("https://images.pexels.com/photos/322207/pexels-photo-322207.jpeg?auto=compress&cs=tinysrgb&w=1600");
+      background-size: cover;
+      background-position: center;
+    }
+
+    .hero-overlay {
+      position: absolute;
+      inset: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      pointer-events: none;
+    }
+
+    .hero-text {
+      text-align: center;
+      color: #fff;
+    }
+
+    .hero-badge {
+      display: inline-block;
+      background-color: rgba(90, 74, 64, 0.9);
+      padding: 8px 24px;
+      font-size: 14px;
+      letter-spacing: 1px;
+      text-transform: uppercase;
+      margin-bottom: 10px;
+    }
+
+    .hero-title {
+      font-family: "Playfair Display", serif;
+      font-size: 64px;
+      padding: 18px 70px;
+      background-color: rgba(168, 136, 115, 0.95);
+      display: inline-block;
+      letter-spacing: 2px;
+    }
+
+    /* Next slide circle on right */
+    .slide-next {
+      position: absolute;
+      right: 40px;
+      top: 50%;
+      transform: translateY(-50%);
+      width: 42px;
+      height: 42px;
+      border-radius: 50%;
+      background-color: rgba(168, 136, 115, 0.9);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      color: #fff;
+      font-size: 22px;
+    }
+
+    /* ===== RESPONSIVE ===== */
+    @media (max-width: 900px) {
+      .navbar {
+        padding: 14px 20px;
+      }
+      .nav-center {
+        display: none;
+      }
+      .search-box {
+        display: none;
+      }
+    }
+
+    @media (max-width: 700px) {
+      .hero-title {
+        font-size: 38px;
+        padding: 14px 32px;
+      }
+      .hero-badge {
+        font-size: 12px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <!-- NAVBAR -->
+  <header class="navbar">
+    <div class="nav-left">Wish</div>
+
+    <nav class="nav-center">
+      <a href="#">Home</a>
+      <a href="#">Clothes</a>
+      <a href="#">Accessories</a>
+      <a href="#">Lingerie</a>
+      <a href="#">Contact</a>
+    </nav>
+
+    <div class="nav-right">
+      <div class="search-box">
+        <input type="text" placeholder="Search" />
+        <i>&#128269;</i>
+      </div>
+
+      <div class="icons">
+        <div class="icon-badge">
+          &#128717; <!-- bag -->
+          <!-- <span>1</span> -->
+        </div>
+        <div class="icon-badge">
+          &#9734; <!-- star -->
+          <!-- <span>0</span> -->
+        </div>
+        <div>
+          &#128276; <!-- bell -->
+        </div>
+      </div>
+
+      <div class="burger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+    </div>
+  </header>
+
+  <!-- HERO SECTION -->
+  <section class="hero">
+    <div class="hero-image"></div>
+
+    <div class="hero-overlay">
+      <div class="hero-text">
+        <div class="hero-badge">Promo Prices</div>
+        <h1 class="hero-title">New Collection</h1>
+      </div>
+    </div>
+  </section>
+</body>
+</html>
