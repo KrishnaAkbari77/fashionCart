@@ -5,68 +5,23 @@
 
     <title>VastraHub</title>
 
-    <!-- favicon -->
-    <link rel="icon" href="images/logo.png">
-    <!-- font awesome -->
-    <link rel="stylesheet" href="css/all.min.css">
-    <!-- offline fonts -->
-    <link rel="stylesheet" href="css/fonts.css">
-    <!-- css file -->
-    <link rel="stylesheet" href="css/style.css">
     
 </head>
 <body>
-    <header>
-         <div class="header-nav d-flex">
-            <div class="container">
-                <ul class="d-flex">
-                    <li><i class="fa-solid fa-bag-shopping"></i>free delivery</li>
-                    <li><i class="fa-solid fa-gift"></i>Free Gift Voucher</li>
-                    <li><i class="fa-solid fa-globe"></i>Money back Guarantee</li>
-                    <li><i class="fa-solid fa-computer"></i> 24x7 Support Assistance</li>
-                </ul>
-            </div>
-        </div>
-         <div class="header">
-            <!-- top-header -->
-            <div class="top-header">
-                <div class="container">
-                    <div class="d-flex justify-content">
-                        <div class="top-header-logo">
-                            <a href="#"><img src="images/asset 4.png" alt="logo"></a>
-                        </div>
-                        <div class="headertop-info">
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                            <span> Info@mail.com</span>
-                            <a href="#"><i class="fa-solid fa-user"></i></a>
-                            <span> Account</span>
-                            <a href="#"><i class="fa-solid fa-basket-shopping"></i></a>
-                            <span> 0 item</span>
+       <div id="content"></div> 
+        <div id="footer"></div>
+<script>
+    //header
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("content").innerHTML = data;
+        });
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- menu -->
-            <div class="menu d-flex">
-
-                <div class="btn">categories</div>
-
-                <nav>
-                    <ul class="d-flex">
-                        <li>Home</li>
-                        <li>Shop</li>
-                        <li>Blog</li>
-                        <li>Contact</li>
-                        <li>About Us</li>
-                        <li>View More</li>
-                    </ul>
-                </nav>
-
-            </div>
-        </div>
-        <!-- banner -->
-
-    </header>
+        //footer
+         fetch("footer.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+</script>
     </body>
     </html>
