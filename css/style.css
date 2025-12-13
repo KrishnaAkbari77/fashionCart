@@ -110,7 +110,37 @@ a {
   color: var(--primary);
 }
 
+
 /* banner */
+
+.menu {
+    position: absolute;
+    justify-content: center;
+    padding: 10px;
+    background-color: #fff;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end; 
+}
+
+.menu ul li:hover {
+    color: var(--primary-color);
+}
+
+.headertop-info {
+    padding: 5px;
+}
+
+span {
+    margin: 0 10px;
+    font-weight: 300;
+}
+
+
+
+/* -----------------banner-content------------ */
+
+
 .bannerbg-img {
   height: 95vh;
   background: url("../images/parallax.jpg") center/cover no-repeat;

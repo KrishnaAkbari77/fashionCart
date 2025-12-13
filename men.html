@@ -4,11 +4,97 @@
 <head>
 
     <title>VastraHub</title>
-
+     <link rel="stylesheet" href="css/product.css">
     
 </head>
 <body>
        <div id="content"></div> 
+       <section>
+       <div class="pro-container">
+
+    <!-- LEFT CATEGORY -->
+    <div class="sidebar">
+        <h3>MEN CATEGORIES</h3>
+
+        <div class="category-item" onclick="show('clothes')">Clothes</div>
+        <div class="category-item" onclick="show('footwear')">Footwear</div>
+        <div class="category-item" onclick="show('accessories')">Accessories</div>
+    </div>
+
+    <!-- RIGHT PRODUCTS -->
+    <div class="content">
+
+        <!-- CLOTHES -->
+        <div id="clothes" class="category">
+            <div class="products">
+
+                <div class="card">
+                    <img src="images/asset 15.png">
+                    <p>Men Shirt</p>
+                    <p class="price">₹999</p>
+                    
+                </div>
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/200x260">
+                    <p>Jeans</p>
+                    <p class="price">₹1499</p>
+                   
+                </div>
+                
+
+                
+
+                
+
+            </div>
+        </div>
+
+        <!-- FOOTWEAR -->
+        <div id="footwear" class="category">
+            <div class="products">
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/200x260">
+                    <p>Sneakers</p>
+                    <p class="price">₹2499</p>
+                   
+                </div>
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/200x260">
+                    <p>Formal Shoes</p>
+                    <p class="price">₹2999</p>
+                      </div>
+
+            </div>
+        </div>
+
+        <!-- ACCESSORIES -->
+        <div id="accessories" class="category">
+            <div class="products">
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/200x260">
+                    <p>Watch</p>
+                    <p class="price">₹1999</p>
+                    
+                </div>
+
+                <div class="card">
+                    <img src="https://via.placeholder.com/200x260">
+                    <p>Wallet</p>
+                    <p class="price">₹799</p>
+                    
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+       </section>
         <div id="footer"></div>
 <script>
     //header
@@ -17,7 +103,13 @@
         .then(data => {
             document.getElementById("content").innerHTML = data;
         });
+    function show(id) {
+        document.querySelectorAll(".category").forEach(cat => cat.style.display = "none");
+        document.getElementById(id).style.display = "block";
+    }
 
+    // default
+    show("clothes");
         //footer
          fetch("footer.html")
         .then(res => res.text())
