@@ -1,11 +1,27 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+
+    <title>VastraHub</title>
+
+    
 </head>
 <body>
-    
-</body>
-</html>
+       <div id="content"></div> 
+        <div id="footer"></div>
+<script>
+    //header
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("content").innerHTML = data;
+        });
+
+        //footer
+         fetch("footer.html")
+        .then(res => res.text())
+        .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+    </body>
+    </html>

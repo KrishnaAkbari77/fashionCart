@@ -126,6 +126,8 @@ i {
     padding: 10px;
     background-color: #fff;
     width: 100%;
+    display: flex;
+    justify-content: flex-end; 
 }
 
 .menu ul li:hover {
@@ -141,15 +143,7 @@ span {
     font-weight: 300;
 }
 
-.menu .btn {
-    color: #fff;
-    padding: 10px 30px;
-    margin-right: 500px;
-}
 
-.menu .btn:hover {
-    color: #E20048;
-}
 
 /* -----------------banner-content------------ */
 
