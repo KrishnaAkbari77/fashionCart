@@ -1,119 +1,123 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
+    <title>VastraHub | Men</title>
 
-    <title>VastraHub</title>
-     <link rel="stylesheet" href="css/product.css">
-    
+    <!-- global css -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+
+    <!-- product page css -->
+    <link rel="stylesheet" href="css/product.css">
 </head>
+
 <body>
-       <div id="content"></div> 
-       <section>
-       <div class="pro-container">
 
-    <!-- LEFT CATEGORY -->
-    <div class="sidebar">
-        <h3>MEN CATEGORIES</h3>
+<!-- HEADER -->
+<div id="header"></div>
 
-        <div class="category-item" onclick="show('clothes')">Clothes</div>
-        <div class="category-item" onclick="show('footwear')">Footwear</div>
-        <div class="category-item" onclick="show('accessories')">Accessories</div>
+<section>
+    <div class="pro-container">
+
+        <!-- LEFT CATEGORY -->
+        <div class="sidebar">
+            <h3>MEN CATEGORIES</h3>
+
+            <div class="category-item" onclick="show('clothes')">Clothes</div>
+            <div class="category-item" onclick="show('footwear')">Footwear</div>
+            <div class="category-item" onclick="show('accessories')">Accessories</div>
+        </div>
+
+        <!-- RIGHT PRODUCTS -->
+        <div class="content">
+
+            <!-- CLOTHES -->
+            <div id="clothes" class="category">
+                <div class="products">
+
+                    <div class="card">
+                        <img src="images/men/asset01.jpg">
+                        <p>Men Shirt</p>
+                        <p class="price">₹999</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="images/men/asset02.jpg">
+                        <p>Jeans</p>
+                        <p class="price">₹1499</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- FOOTWEAR -->
+            <div id="footwear" class="category">
+                <div class="products">
+
+                    <div class="card">
+                        <img src="images/men/footwear/0101.jpg">
+                        <p>Sneakers</p>
+                        <p class="price">₹2499</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="images/men/footwear/0102.jpg">
+                        <p>Formal Shoes</p>
+                        <p class="price">₹2999</p>
+                    </div>
+
+                </div>
+            </div>
+
+            <!-- ACCESSORIES -->
+            <div id="accessories" class="category">
+                <div class="products">
+
+                    <div class="card">
+                        <img src="images/accessories/0011.jpg">
+                        <p>Watch</p>
+                        <p class="price">₹1999</p>
+                    </div>
+
+                    <div class="card">
+                        <img src="images/accessories/0012.jpg">
+                        <p>Wallet</p>
+                        <p class="price">₹799</p>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
     </div>
+</section>
 
-    <!-- RIGHT PRODUCTS -->
-    <div class="content">
+<!-- FOOTER -->
+<div id="footer"></div>
 
-        <!-- CLOTHES -->
-        <div id="clothes" class="category">
-            <div class="products">
-
-                <div class="card">
-                    <img src="images/asset 15.png">
-                    <p>Men Shirt</p>
-                    <p class="price">₹999</p>
-                    
-                </div>
-
-                <div class="card">
-                    <img src="https://via.placeholder.com/200x260">
-                    <p>Jeans</p>
-                    <p class="price">₹1499</p>
-                   
-                </div>
-                
-
-                
-
-                
-
-            </div>
-        </div>
-
-        <!-- FOOTWEAR -->
-        <div id="footwear" class="category">
-            <div class="products">
-
-                <div class="card">
-                    <img src="https://via.placeholder.com/200x260">
-                    <p>Sneakers</p>
-                    <p class="price">₹2499</p>
-                   
-                </div>
-
-                <div class="card">
-                    <img src="https://via.placeholder.com/200x260">
-                    <p>Formal Shoes</p>
-                    <p class="price">₹2999</p>
-                      </div>
-
-            </div>
-        </div>
-
-        <!-- ACCESSORIES -->
-        <div id="accessories" class="category">
-            <div class="products">
-
-                <div class="card">
-                    <img src="https://via.placeholder.com/200x260">
-                    <p>Watch</p>
-                    <p class="price">₹1999</p>
-                    
-                </div>
-
-                <div class="card">
-                    <img src="https://via.placeholder.com/200x260">
-                    <p>Wallet</p>
-                    <p class="price">₹799</p>
-                    
-                </div>
-
-            </div>
-        </div>
-
-    </div>
-</div>
-
-       </section>
-        <div id="footer"></div>
 <script>
-    //header
+    /* load header */
     fetch("header.html")
-        .then(response => response.text())
-        .then(data => {
-            document.getElementById("content").innerHTML = data;
-        });
+        .then(res => res.text())
+        .then(data => document.getElementById("header").innerHTML = data);
+
+    /* category switch */
     function show(id) {
-        document.querySelectorAll(".category").forEach(cat => cat.style.display = "none");
+        document.querySelectorAll(".category").forEach(cat => {
+            cat.style.display = "none";
+        });
         document.getElementById(id).style.display = "block";
     }
 
-    // default
+    /* default category */
     show("clothes");
-        //footer
-         fetch("footer.html")
+
+    /* load footer */
+    fetch("footer.html")
         .then(res => res.text())
         .then(data => document.getElementById("footer").innerHTML = data);
 </script>
-    </body>
-    </html>
+
+</body>
+</html>

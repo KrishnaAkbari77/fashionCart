@@ -53,16 +53,16 @@ a {
   color: var(--primary);
 }
 
-
 /* header */
 .main-header {
   background-color: #fff;
-  padding: auto;
+  padding: none;
 }
 
 .header-top {
-  padding: 5px 0;
-  align-items: center;
+  padding: auto;
+  display: flex;
+  justify-content: space-between;
 }
 
 .logo a {
@@ -74,72 +74,74 @@ a {
 
 /* right info */
 .header-info a {
-  margin-left: 20px;
-  font-size: 14px;
+  font-size: 15px;
   color: #000;
-  text-decoration: solid;
 }
 
 .header-info i {
-  color: var(--primary);
+  color: var(--primary) !important;
+  margin-right: 5px;
+}
+/* ================= MAIN HEADER ================= */
+
+/* top part */
+.header-top {
+  padding: 10px 0;
+}
+
+.logo a {
+  font-size: 36px;
+  letter-spacing: 6px;
+  color: #000;
+}
+
+/* right info */
+.header-info a {
+  margin-left: 10px;
+  font-size: 16px;
+  color: #000;
+}
+
+.header-info i {
+  color: var(--primary-color);
   margin-right: 5px;
 }
 
-/* menu */
+/* ===== MENU ===== */
+.menu {
+  background-color: #fff;
+  padding: 15px 0;
+}
 
 .menu nav ul {
-  list-style: none;
+  list-style: none; /* no bullets */
   display: flex;
-  justify-content: center;
+  justify-content: center; /* CENTER MENU */
   align-items: center;
-  padding: 0;
   margin: 0;
+  padding: 0;
 }
 
-.menu ul li {
-  margin: 10px 15px;
+.menu nav ul li {
+  margin: 0 16px;
 }
 
-.menu ul li a {
-  font-size: 18px;
-  color: #000;
+.menu nav ul li a {
+  font-size: 16px;
+  color: var(--text-dark);
   transition: 0.3s;
 }
 
-.menu ul li a:hover {
-  color: var(--primary);
-}
-
-
-/* banner */
-
-.menu {
-    position: absolute;
-    justify-content: center;
-    padding: 10px;
-    background-color: #fff;
-    width: 100%;
-    display: flex;
-    justify-content: flex-end; 
-}
-
-.menu ul li:hover {
-    color: var(--primary-color);
-}
-
-.headertop-info {
-    padding: 5px;
+.menu nav ul li a:hover {
+  color: var(--primary-color);
 }
 
 span {
-    margin: 0 10px;
-    font-weight: 300;
+  margin: 0 10px;
+  font-weight: 300;
 }
 
-
-
 /* -----------------banner-content------------ */
-
 
 .bannerbg-img {
   height: 95vh;
@@ -198,16 +200,35 @@ span {
   margin: 5px;
   padding: 7px;
   transition: 0.3s;
+  position: relative;
+  text-align: center;
 }
 
 .subbox1 img {
   width: 250px;
   height: 250px;
   object-fit: cover;
+  position: relative;
 }
 
 .subbox1:hover {
   transform: translateY(-5px);
+}
+
+/* wishlist heart (minimal) */
+
+.wishlist-btn {
+  position: absolute;
+  top: 15px;
+  right: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  color:#000;
+  transition: 0.3s;
+}
+
+.wishlist-btn:hover {
+  color: crimson;
 }
 
 /* parallax */
@@ -238,91 +259,90 @@ span {
 /* ================= FOOTER ================= */
 
 .footer {
-    background-color: #fff;
-    margin-top: 60px;
+  background-color: #fff;
+  margin-top: 60px;
 }
 
 /* top section */
 .footer-top {
-    padding: 60px 0 40px;
-    text-align: center;
+  padding: 60px 0 40px;
+  text-align: center;
 }
 
 .footer-logo {
-    font-size: 36px;
-    letter-spacing: 8px;
-    margin-bottom: 15px;
+  font-size: 36px;
+  letter-spacing: 8px;
+  margin-bottom: 15px;
 }
 
 .footer-top p {
-    max-width: 700px;
-    margin: auto;
-    color: #777;
-    line-height: 24px;
+  max-width: 700px;
+  margin: auto;
+  color: #777;
+  line-height: 24px;
 }
 
 /* social icons */
 .footer-social {
-    margin-top: 30px;
+  margin-top: 30px;
 }
 
 .footer-social a {
-    display: inline-block;
-    width: 55px;
-    height: 55px;
-    background-color: var(--primary);
-    color: #fff;
-    line-height: 55px;
-    margin: 0 5px;
-    border-radius: 4px;
-    transition: 0.3s;
+  display: inline-block;
+  width: 55px;
+  height: 55px;
+  background-color: var(--primary);
+  color: #fff;
+  line-height: 55px;
+  margin: 0 5px;
+  border-radius: 4px;
+  transition: 0.3s;
 }
 
 .footer-social a:hover {
-    background-color: transparent;
-    color: var(--primary);
-    border: 1px solid var(--primary);
+  background-color: transparent;
+  color: var(--primary);
+  border: 1px solid var(--primary);
 }
 
 /* links section */
 .footer-links {
-    padding: 20px 0;
+  padding: 20px 0;
 }
 
 .footer-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 40px;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 40px;
 }
 
 /* footer boxes */
 .footer-box h3 {
-    font-size: 20px;
-    margin-bottom: 25px;
-    font-weight: 500;
+  font-size: 20px;
+  margin-bottom: 25px;
+  font-weight: 500;
 }
 
 .footer-box ul {
-    list-style: none;
+  list-style: none;
 }
 
 .footer-box ul li {
-    margin-bottom: 15px;
-    font-size: 15px;
-    color: #555;
+  margin-bottom: 15px;
+  font-size: 15px;
+  color: #555;
 }
 
 .footer-box ul li i {
-    color: var(--primary);
-    margin-right: 8px;
+  color: var(--primary);
+  margin-right: 8px;
 }
 
 .footer-box ul li a {
-    color: #555;
-    transition: 0.3s;
+  color: #555;
+  transition: 0.3s;
 }
 
 .footer-box ul li a:hover {
-    color: var(--primary);
+  color: var(--primary);
 }
-

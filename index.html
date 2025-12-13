@@ -17,47 +17,8 @@
 </head>
 
 <body>
-
-
-    <!-- ================= MAIN HEADER ================= -->
-    <header class="main-header">
-        <div class="container header-top d-flex justify-content">
-
-            <!-- Logo -->
-            <div class="logo">
-                <a href="index.html">VastraHub</a>
-            </div>
-
-            <!-- Right info -->
-            <div class="header-info">
-                <a href="mailto:info@mail.com">
-                    <i class="fa-solid fa-envelope"></i> Info@mail.com
-                </a>
-                <a href="login.html">
-                    <i class="fa-solid fa-user"></i> Account
-                </a>
-                <a href="cart.html">
-                    <i class="fa-solid fa-cart-shopping"></i> 0 item
-                </a>
-            </div>
-        </div>
-
-        <!-- ================= MENU ================= -->
-        <div class="menu">
-            <div>
-                <nav>
-                    <ul class="d-flex">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="men.html">Men</a></li>
-                        <li><a href="women.html">Women</a></li>
-                        <li><a href="kids.html">Kids</a></li>
-                        <li><a href="contact-us.html">Contact</a></li>
-                    </ul>
-                </nav>
-            </div>
-        </div>
-    </header>
-
+    <!-- header---->
+    <div id="header"></div>
 
     <!-- ================= HERO BANNER ================= -->
     <section class="bannerbg-img">
@@ -128,15 +89,24 @@
 
             <div class="products">
                 <div class="subbox1">
-                    <a href="product_detail.html">
-                        <img src="images/men/asset02.jpg">
-                    </a>
+                    <div class="product-img">
+                        <a href="">
+                            <img src="images/men/asset02.jpg">
+                        </a>
+
+                        <!-- wishlist heart -->
+                        <span class="wishlist-btn" onclick="addToWishlist('Casual Wear')">
+                            <i class="fa-regular fa-heart"></i>
+                        </span>
+                    </div>
+
                     <h5>Casual Wear</h5>
                     <h5>₹1,299</h5>
+
                 </div>
 
                 <div class="subbox1">
-                    <a href="product_detail.html">
+                    <a href="#">
                         <img src="images/women/asset15.jpg">
                     </a>
                     <h5>Minimal Dress</h5>
@@ -144,7 +114,7 @@
                 </div>
 
                 <div class="subbox1">
-                    <a href="product_detail.html">
+                    <a href="#">
                         <img src="images/men/asset14.jpg">
                     </a>
                     <h5>Modern Outfit</h5>
@@ -152,33 +122,35 @@
                 </div>
 
                 <div class="subbox1">
-                    <a href="product_detail.html">
+                    <a href="#">
                         <img src="images/women/asset04.jpg">
                     </a>
                     <h5>Street Style</h5>
                     <h5>₹1,399</h5>
                 </div>
                 <div class="subbox1">
-                    <a href="product_detail.html">
+                    <a href="#">
                         <img src="images/kids/asset06.jpg">
                     </a>
                     <h5>olive jacket</h5>
                     <h5>₹1,399</h5>
                 </div>
                 <div class="subbox1">
-                    <a href="product_detail.html">
+                    <a href="#">
                         <img src="images/women/asset19.jpg">
                     </a>
                     <h5>Satin dress</h5>
                     <h5>₹1,399</h5>
-                </div>  <div class="subbox1">
-                    <a href="product_detail.html">
+                </div>
+                <div class="subbox1">
+                    <a href="#">
                         <img src="images/women/asset20.jpg">
                     </a>
                     <h5>flared top</h5>
                     <h5>₹1,399</h5>
-                </div>  <div class="subbox1">
-                    <a href="product_detail.html">
+                </div>
+                <div class="subbox1">
+                    <a href="#">
                         <img src="images/kids/asset15.jpg">
                     </a>
                     <h5>dinosour jacket</h5>
@@ -207,80 +179,32 @@
         </div>
     </section>
 
-<!-- ================= FOOTER ================= -->
-<footer class="footer">
+    <!-- ================= FOOTER ================= -->
+    <div id="footer"></div>
 
-    <!-- top footer (logo + text + social) -->
-    <div class="footer-top">
-        <div class="container footer-top-content">
-            <h1 class="footer-logo">VastraHub</h1>
-            <p>
-                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
-                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
-            </p>
 
-            <div class="footer-social">
-                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                <a href="#"><i class="fab fa-twitter"></i></a>
-                <a href="#"><i class="fab fa-instagram"></i></a>
-            </div>
-        </div>
-    </div>
+    <script>
+        /* load header */
+        fetch("header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
 
-    <!-- main footer links -->
-    <div class="footer-links">
-        <div class="container footer-grid">
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
 
-            <!-- store info -->
-            <div class="footer-box">
-                <h3>Store Information</h3>
-                <ul>
-                    <li><i class="fa-solid fa-location-dot"></i> 4005, la roche posh<br>France</li>
-                    <li><i class="fa-solid fa-phone"></i> +00 01010101</li>
-                    <li><i class="fa-solid fa-envelope"></i> info@mail.com</li>
-                </ul>
-            </div>
+        function addToWishlist(product) {
+            let wishlist = JSON.parse(localStorage.getItem("wishlist")) || [];
 
-            <!-- account -->
-            <div class="footer-box">
-                <h3>Your Account</h3>
-                <ul>
-                    <li><a href="login.html">My account</a></li>
-                    <li><a href="#">Personal info</a></li>
-                    <li><a href="#">Orders</a></li>
-                    <li><a href="cart.html">Your cart</a></li>
-                </ul>
-            </div>
-
-            <!-- product -->
-            <div class="footer-box">
-                <h3>Product</h3>
-                <ul>
-                    <li><a href="#">Delivery</a></li>
-                    <li><a href="#">Legal notice</a></li>
-                    <li><a href="#">FAQs</a></li>
-                    <li><a href="#">New products</a></li>
-                    <li><a href="#">Best sales</a></li>
-                </ul>
-            </div>
-
-            <!-- company -->
-            <div class="footer-box">
-                <h3>Our Company</h3>
-                <ul>
-                    <li><a href="#">About Us</a></li>
-                    <li><a href="#">New Products</a></li>
-                    <li><a href="contact-us.html">Contact Us</a></li>
-                    <li><a href="#">Sitemap</a></li>
-                    <li><a href="#">Products</a></li>
-                </ul>
-            </div>
-
-        </div>
-    </div>
-
-</footer>
-
+            if (!wishlist.includes(product)) {
+                wishlist.push(product);
+                localStorage.setItem("wishlist", JSON.stringify(wishlist));
+                alert(product + " added to wishlist");
+            } else {
+                alert("Already in wishlist");
+            }
+        }
+    </script>
 </body>
 
 </html>
