@@ -2,69 +2,285 @@
 <html lang="en">
 
 <head>
-
+    <meta charset="UTF-8">
     <title>Vastra Hub</title>
+
     <!-- favicon -->
     <link rel="icon" href="images/logo.png">
-    <!-- font awesome -->
+
+    <!-- icons & fonts -->
     <link rel="stylesheet" href="css/all.min.css">
-    <!-- offline fonts -->
     <link rel="stylesheet" href="css/fonts.css">
-    <!-- css file -->
+
+    <!-- main css -->
     <link rel="stylesheet" href="css/style.css">
-    
 </head>
+
 <body>
-    <header>
-         <div class="header-nav d-flex">
-            <div class="container">
-                <ul class="d-flex">
-                    <li><i class="fa-solid fa-bag-shopping"></i>free delivery</li>
-                    <li><i class="fa-solid fa-gift"></i>Free Gift Voucher</li>
-                    <li><i class="fa-solid fa-globe"></i>Money back Guarantee</li>
-                    <li><i class="fa-solid fa-computer"></i> 24x7 Support Assistance</li>
-                </ul>
+
+
+    <!-- ================= MAIN HEADER ================= -->
+    <header class="main-header">
+        <div class="container header-top d-flex justify-content">
+
+            <!-- Logo -->
+            <div class="logo">
+                <a href="index.html">VastraHub</a>
+            </div>
+
+            <!-- Right info -->
+            <div class="header-info">
+                <a href="mailto:info@mail.com">
+                    <i class="fa-solid fa-envelope"></i> Info@mail.com
+                </a>
+                <a href="login.html">
+                    <i class="fa-solid fa-user"></i> Account
+                </a>
+                <a href="cart.html">
+                    <i class="fa-solid fa-cart-shopping"></i> 0 item
+                </a>
             </div>
         </div>
-         <div class="header">
-            <!-- top-header -->
-            <div class="top-header">
-                <div class="container">
-                    <div class="d-flex justify-content">
-                        <div class="top-header-logo">
-                            <a href="#"><h1>VastraHub</h1></a>
-                        </div>
-                        <div class="headertop-info">
-                            <a href="#"><i class="fas fa-envelope"></i></a>
-                            <span> Info@mail.com</span>
-                            <a href="#"><i class="fa-solid fa-user"></i></a>
-                            <span> Account</span>
-                            <a href="#"><i class="fa-solid fa-basket-shopping"></i></a>
-                            <span> 0 item</span>
 
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <!-- menu -->
-            <div class="menu d-flex">
-
-                <div class="btn">categories</div>
+        <!-- ================= MENU ================= -->
+        <div class="menu">
+            <div>
                 <nav>
                     <ul class="d-flex">
-                        <li>Home</li>
-                        <li>Shop</li>
-                        <li>Blog</li>
-                        <li>Contact</li>
-                        <li>About Us</li>
-                        <li>View More</li>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="men.html">Men</a></li>
+                        <li><a href="women.html">Women</a></li>
+                        <li><a href="kids.html">Kids</a></li>
+                        <li><a href="contact-us.html">Contact</a></li>
                     </ul>
                 </nav>
-
             </div>
         </div>
-        <!-- banner -->
-
     </header>
-    </body>
-    </html>
+
+
+    <!-- ================= HERO BANNER ================= -->
+    <section class="bannerbg-img">
+        <div class="container">
+            <div class="banner-content">
+                <h3>2025 Collection</h3>
+                <h2>Minimal <span>Style</span></h2>
+                <p>Discover the latest fashion trends</p>
+                <a href="women.html" class="btn">Shop Now</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= CATEGORIES ================= -->
+    <section class="category-section">
+        <div class="banner-data d-flex">
+            <div class="img1">
+                <img src="images/men/asset01.jpg">
+                <div class="data-content">
+                    <p>Men</p>
+                    <h2>Collection</h2>
+                    <a href="men.html" class="btn">Shop Now</a>
+                </div>
+            </div>
+
+            <div class="img1">
+                <img src="images/women/asset32.jpg">
+                <div class="data-content">
+                    <p>Women</p>
+                    <h2>Collection</h2>
+                    <a href="women.html" class="btn">Shop Now</a>
+                </div>
+            </div>
+
+            <div class="img1">
+                <img src="images/kids/asset19.jpg">
+                <div class="data-content">
+                    <p>Kids</p>
+                    <h2>Collection</h2>
+                    <a href="kids.html" class="btn">Shop Now</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= FEATURES ================= -->
+    <section class="features">
+        <div class="container d-flex justify-content">
+            <div class="feature-box">
+                <h3>Free Shipping</h3>
+                <p>On all orders above ₹999</p>
+            </div>
+            <div class="feature-box">
+                <h3>Easy Returns</h3>
+                <p>7 days return policy</p>
+            </div>
+            <div class="feature-box">
+                <h3>Secure Payment</h3>
+                <p>100% safe checkout</p>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= NEW ARRIVALS ================= -->
+    <section class="trending-products">
+        <div class="container">
+            <h1>New Arrivals</h1>
+
+            <div class="products">
+                <div class="subbox1">
+                    <a href="product_detail.html">
+                        <img src="images/men/asset02.jpg">
+                    </a>
+                    <h5>Casual Wear</h5>
+                    <h5>₹1,299</h5>
+                </div>
+
+                <div class="subbox1">
+                    <a href="product_detail.html">
+                        <img src="images/women/asset15.jpg">
+                    </a>
+                    <h5>Minimal Dress</h5>
+                    <h5>₹1,499</h5>
+                </div>
+
+                <div class="subbox1">
+                    <a href="product_detail.html">
+                        <img src="images/men/asset14.jpg">
+                    </a>
+                    <h5>Modern Outfit</h5>
+                    <h5>₹1,699</h5>
+                </div>
+
+                <div class="subbox1">
+                    <a href="product_detail.html">
+                        <img src="images/women/asset04.jpg">
+                    </a>
+                    <h5>Street Style</h5>
+                    <h5>₹1,399</h5>
+                </div>
+                <div class="subbox1">
+                    <a href="product_detail.html">
+                        <img src="images/kids/asset06.jpg">
+                    </a>
+                    <h5>olive jacket</h5>
+                    <h5>₹1,399</h5>
+                </div>
+                <div class="subbox1">
+                    <a href="product_detail.html">
+                        <img src="images/women/asset19.jpg">
+                    </a>
+                    <h5>Satin dress</h5>
+                    <h5>₹1,399</h5>
+                </div>  <div class="subbox1">
+                    <a href="product_detail.html">
+                        <img src="images/women/asset20.jpg">
+                    </a>
+                    <h5>flared top</h5>
+                    <h5>₹1,399</h5>
+                </div>  <div class="subbox1">
+                    <a href="product_detail.html">
+                        <img src="images/kids/asset15.jpg">
+                    </a>
+                    <h5>dinosour jacket</h5>
+                    <h5>₹1,399</h5>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ================= PARALLAX ================= -->
+    <section class="parallax-banner">
+        <div class="parallax-content">
+            <h2>Season Sale</h2>
+            <p>Up to 40% off</p>
+            <a href="women.html" class="btn">Explore</a>
+        </div>
+    </section>
+
+    <!-- ================= NEWSLETTER ================= -->
+    <section class="newsletter">
+        <div class="container">
+            <h2>Subscribe Newsletter</h2>
+            <p>Get updates on new arrivals</p>
+            <input type="email" placeholder="Enter your email">
+            <button class="btn">Subscribe</button>
+        </div>
+    </section>
+
+<!-- ================= FOOTER ================= -->
+<footer class="footer">
+
+    <!-- top footer (logo + text + social) -->
+    <div class="footer-top">
+        <div class="container footer-top-content">
+            <h1 class="footer-logo">VastraHub</h1>
+            <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting industry.
+                Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+            </p>
+
+            <div class="footer-social">
+                <a href="#"><i class="fab fa-facebook-f"></i></a>
+                <a href="#"><i class="fab fa-twitter"></i></a>
+                <a href="#"><i class="fab fa-instagram"></i></a>
+            </div>
+        </div>
+    </div>
+
+    <!-- main footer links -->
+    <div class="footer-links">
+        <div class="container footer-grid">
+
+            <!-- store info -->
+            <div class="footer-box">
+                <h3>Store Information</h3>
+                <ul>
+                    <li><i class="fa-solid fa-location-dot"></i> 4005, la roche posh<br>France</li>
+                    <li><i class="fa-solid fa-phone"></i> +00 01010101</li>
+                    <li><i class="fa-solid fa-envelope"></i> info@mail.com</li>
+                </ul>
+            </div>
+
+            <!-- account -->
+            <div class="footer-box">
+                <h3>Your Account</h3>
+                <ul>
+                    <li><a href="login.html">My account</a></li>
+                    <li><a href="#">Personal info</a></li>
+                    <li><a href="#">Orders</a></li>
+                    <li><a href="cart.html">Your cart</a></li>
+                </ul>
+            </div>
+
+            <!-- product -->
+            <div class="footer-box">
+                <h3>Product</h3>
+                <ul>
+                    <li><a href="#">Delivery</a></li>
+                    <li><a href="#">Legal notice</a></li>
+                    <li><a href="#">FAQs</a></li>
+                    <li><a href="#">New products</a></li>
+                    <li><a href="#">Best sales</a></li>
+                </ul>
+            </div>
+
+            <!-- company -->
+            <div class="footer-box">
+                <h3>Our Company</h3>
+                <ul>
+                    <li><a href="#">About Us</a></li>
+                    <li><a href="#">New Products</a></li>
+                    <li><a href="contact-us.html">Contact Us</a></li>
+                    <li><a href="#">Sitemap</a></li>
+                    <li><a href="#">Products</a></li>
+                </ul>
+            </div>
+
+        </div>
+    </div>
+
+</footer>
+
+</body>
+
+</html>
