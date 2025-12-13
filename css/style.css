@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap");
+
 :root {
   --bg-main: #f9f8f6;
   --bg-section: #efe9e3;
@@ -10,7 +12,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Times New Roman", serif;
+  font-family: "Montserrat", sans-serif;
 }
 
 body {
@@ -194,7 +196,14 @@ span {
   justify-content: center;
   flex-wrap: wrap;
 }
-
+.add-cart-btn {
+  display: block;
+  margin-top: 10px;
+  text-align: center;
+  font-size: 14px;
+  padding: 8px 0;
+  background: var(--border-soft);
+}
 .subbox1 {
   background: #fff;
   margin: 5px;
@@ -223,7 +232,7 @@ span {
   right: 8px;
   cursor: pointer;
   font-size: 16px;
-  color:#000;
+  color: #000;
   transition: 0.3s;
 }
 
@@ -345,4 +354,186 @@ span {
 
 .footer-box ul li a:hover {
   color: var(--primary);
+}
+
+/* ===== SUPPORT SECTION ===== */
+
+.support-section {
+  padding: 40px 0;
+  background: var(--bg-main);
+}
+
+.support-section h2 {
+  font-size: 26px;
+  color: var(--primary);
+  margin-bottom: 20px;
+  letter-spacing: 1px;
+}
+
+.support-text {
+  max-width: 800px;
+  font-size: 18px;
+  color: #444;
+  line-height: 24px;
+  margin-bottom: 15px;
+}
+.faq-section h3 {
+  color: var(--primary);
+}
+.faq-section {
+  margin-top: 40px;
+}
+
+.faq-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 0;
+  border-bottom: 1px solid #ddd;
+  cursor: pointer;
+}
+
+.faq-item .icon {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+.faq-content {
+  display: none;
+  margin: 10px 0px 0px 10px;
+  color: var(--text-dark);
+}
+
+/* ===== (LOGIN / REGISTER) ===== */
+
+.auth-section {
+  min-height: 70vh;
+  display: flex;
+  margin-top: 20px;
+  align-items: center;
+  justify-content: center;
+  background: var(--bg-main);
+}
+
+.auth-box {
+  background: #fff;
+  padding: 20px;
+  width: 380px;
+  border: 1px solid var(--border-soft);
+}
+
+.auth-box h2 {
+  text-align: center;
+  margin-bottom: 25px;
+  font-weight: 500;
+}
+
+.auth-box form input {
+  width: 100%;
+  padding: 12px;
+  margin-bottom: 15px;
+  border: 1px solid var(--border-soft);
+  font-size: 14px;
+}
+
+.auth-box form input:focus {
+  outline: none;
+  border-color: var(--primary);
+}
+
+.auth-box .btn {
+  width: 100%;
+  margin-top: 10px;
+}
+
+.auth-text {
+  text-align: center;
+  margin-top: 20px;
+  font-size: 14px;
+}
+
+.auth-text a {
+  color: var(--primary);
+}
+/* ===== WISHLIST ===== */
+
+.wishlist-section {
+  padding: 20px 0;
+}
+
+.wishlist-section h2 {
+  text-align: center;
+}
+
+/* --profile */
+
+.profile-layout {
+  margin: 50px;
+  display: flex;
+  gap: 30px;
+}
+
+/* sidebar */
+.profile-sidebar {
+  width: 260px;
+  background: #fff;
+  border: 1px solid var(--border-soft);
+}
+
+.profile-sidebar ul {
+  list-style: none;
+}
+
+.profile-sidebar ul li {
+  padding: 15px 20px;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: #333;
+}
+
+.profile-sidebar ul li i {
+  font-size: 16px;
+}
+
+/* active item */
+.profile-sidebar ul li.active {
+  color: var(--primary);
+  font-weight: 500;
+  border-right: 3px solid var(--primary);
+  background: #faf7f4;
+}
+
+/* hover */
+.profile-sidebar ul li:hover {
+  background: #f5f5f5;
+}
+
+/* logout */
+.profile-sidebar ul li.logout {
+  color: #b00020;
+}
+
+/* main content */
+.profile-content {
+  flex: 1;
+  background: #fff;
+  border: 1px solid var(--border-soft);
+  padding: 30px;
+}
+
+.profile-content h2 {
+  margin-bottom: 25px;
+}
+
+/* reuse existing rows */
+.profile-box .info-row {
+  display: flex;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid #eee;
+  font-size: 14px;
 }

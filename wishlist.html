@@ -3,18 +3,57 @@
 
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Wishlist</title>
+    <title>Wishlist | VastraHub</title>
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
+
     <div id="header"></div>
 
+    <section class="wishlist-section">
+        <div class="container">
+            <h2>My Wishlist</h2>
+
+            <div class="products">
+
+                <div class="subbox1">
+                    <a href="product_detail.html">
+                        <img src="images/men/asset02.jpg">
+                    </a>
+                    <h5>Casual Wear</h5>
+                    <h5>₹1,299</h5>
+                    <a href="cart.html" class="btn add-cart-btn">Add to Cart</a>
+                </div>
+
+                <div class="subbox1">
+                    <a href="product_detail.html">
+                        <img src="images/women/asset15.jpg">
+                    </a>
+                    <h5>Minimal Dress</h5>
+                    <h5>₹1,499</h5>
+                    <a href="cart.html" class="btn add-cart-btn">Add to Cart</a>
+                </div>
+
+                <div class="subbox1">
+                    <a href="product_detail.html">
+                        <img src="images/men/asset04.jpg">
+                    </a>
+                    <h5>Street Style</h5>
+                    <h5>₹1,399</h5>
+                    <a href="cart.html" class="btn add-cart-btn">Add to Cart</a>
+                </div>
+
+            </div>
+        </div>
+    </section>
 
     <div id="footer"></div>
 
     <script>
-        /* load header */
         fetch("header.html")
             .then(res => res.text())
             .then(data => document.getElementById("header").innerHTML = data);
@@ -22,8 +61,8 @@
         fetch("footer.html")
             .then(res => res.text())
             .then(data => document.getElementById("footer").innerHTML = data);
-
     </script>
+
 </body>
 
 </html>

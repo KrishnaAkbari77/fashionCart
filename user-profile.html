@@ -1,29 +1,93 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User-profile</title>
+    <title>My Profile | VastraHub</title>
+
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
-    <div id="header"></div>
 
+<div id="header"></div>
 
-    <div id="footer"></div>
-    
-    <script>
-        /* load header */
-        fetch("header.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("header").innerHTML = data);
+<section class="profile-section">
+    <div class="container profile-layout">
 
-        fetch("footer.html")
-            .then(res => res.text())
-            .then(data => document.getElementById("footer").innerHTML = data);
+        <!-- ===== SIDE PANEL ===== -->
+        <aside class="profile-sidebar">
+            <ul>
+                <li class="active">
+                    <i class="fa-regular fa-user"></i> My Profile
+                </li>
+                <li>
+                    <i class="fa-solid fa-ticket"></i> My Coupons
+                </li>
+                <li>
+                    <i class="fa-solid fa-wallet"></i> My Wallet
+                </li>
+                <li>
+                    <i class="fa-solid fa-box"></i> My Orders
+                </li>
+                <li>
+                    <i class="fa-regular fa-heart"></i> My Wishlist
+                </li>
+                <li>
+                    <i class="fa-regular fa-credit-card"></i> My Saved Payment
+                </li>
+                <li class="logout">
+                    <i class="fa-solid fa-power-off"></i> Log Out
+                </li>
+            </ul>
+        </aside>
 
-    </script>
+        <!-- ===== MAIN CONTENT ===== -->
+        <div class="profile-content">
+
+            <h2>My Profile</h2>
+
+            <div class="profile-box">
+                <div class="info-row">
+                    <span>Full Name</span>
+                    <span>John Doe</span>
+                </div>
+
+                <div class="info-row">
+                    <span>Email</span>
+                    <span>johndoe@email.com</span>
+                </div>
+
+                <div class="info-row">
+                    <span>Phone</span>
+                    <span>+91 9876543210</span>
+                </div>
+
+                <div class="info-row">
+                    <span>Address</span>
+                    <span>Ahmedabad, India</span>
+                </div>
+
+                <a href="#" class="btn add-cart-btn">Edit Profile</a>
+            </div>
+
+        </div>
+
+    </div>
+</section>
+
+<div id="footer"></div>
+
+<script>
+fetch("header.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("header").innerHTML = data);
+
+fetch("footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+
 </body>
-
 </html>
