@@ -316,6 +316,28 @@ span {
     gap: 15px;
      background: white;
 }
+.thumbnails {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin: 15px 0 15px 10px;
+}
+
+.thumbnails img {
+    width: 80px;
+    height: 100px;
+    border: 1px solid #ddd;
+    cursor: pointer;
+}
+
+.main-image img {
+  margin: 15px 0;
+    width: 350px;
+    height: 350px;
+    
+  position: relative;
+    
+}
 
 
 
@@ -326,6 +348,7 @@ span {
 }
 
 .pro-info{
+  margin: 30px 0 15px 0;
 padding: 10px;
 
 }

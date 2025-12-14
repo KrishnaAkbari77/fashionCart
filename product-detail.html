@@ -21,16 +21,16 @@
     <div class="pro-container">
         <!-- Image -->
          <div class="image-section">
-             <div class="thumbnails">
-            <img src="https://via.placeholder.com/80x100" onclick="changeImg(this)">
-            <img src="https://via.placeholder.com/80x100/ffc0cb" onclick="changeImg(this)">
-            <img src="https://via.placeholder.com/80x100/f4a460" onclick="changeImg(this)">
+        <div class="thumbnails">
+            <img src="images/men/asset01.jpg" onclick="changeImg(this)">
+            <img src="images/men/asset02.jpg" onclick="changeImg(this)">
+            <img src="images/men/asset03.jpg" onclick="changeImg(this)">
         </div>
 
         <div class="main-image">
-            <img id="mainImg" src="https://via.placeholder.com/420x520">
+            <img id="mainImg" src="images/men/asset01.jpg">
         </div>
-         </div>
+    </div>
          <!-- Product Info -->
         <div class="product-info">
             <div class="pro-info">
@@ -66,6 +66,9 @@
     </div>
 </div>
         </div>
+        <div class="detail">
+            
+        </div>
     
 </section>
 
@@ -78,8 +81,15 @@
         .then(res => res.text())
         .then(data => document.getElementById("header").innerHTML = data);
 
-    
+    /* Image  */
+function changeImg(img) {
+    document.getElementById("mainImg").src = img.src;
+}
 
+function selectSize(btn) {
+    document.querySelectorAll(".size-box button").forEach(b => b.classList.remove("active"));
+    btn.classList.add("active");
+}
     /* load footer */
     fetch("footer.html")
         .then(res => res.text())
