@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>Register | VastraHub</title>
@@ -12,39 +13,67 @@
 
 <body>
 
-<div id="header"></div>
+    <div id="header"></div>
 
-<section class="auth-section">
-    <div class="auth-box">
-        <h2>Create Account</h2>
+    <section class="auth-section">
+        <div class="auth-box">
+            <h2>Create Account</h2>
+            <form id="registerForm">
+                <input type="text" id="name" placeholder="Full Name" required>
+                <input type="email" id="email" placeholder="Email address" required>
+                <input type="password" id="password" placeholder="Password" required>
+                <input type="password" id="confirmPassword" placeholder="Confirm Password" required>
 
-        <form>
-            <input type="text" placeholder="Full Name" required>
-            <input type="email" placeholder="Email address" required>
-            <input type="password" placeholder="Password" required>
-            <input type="password" placeholder="Confirm Password" required>
+                <button type="submit" class="btn">Register</button>
+            </form>
+            <p class="auth-text">
+                Already have an account?
+                <a href="login.html">Login</a>
+            </p>
+        </div>
+    </section>
 
-            <button type="submit" class="btn">Register</button>
-        </form>
+    <div id="footer"></div>
 
-        <p class="auth-text">
-            Already have an account?
-            <a href="login.html">Login</a>
-        </p>
-    </div>
-</section>
+    <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
 
-<div id="footer"></div>
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+        document.getElementById("registerForm").addEventListener("submit", function (e) {
+            e.preventDefault();
 
-<script>
-fetch("header.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("header").innerHTML = data);
+            const name = document.getElementById("name").value.trim();
+            const email = document.getElementById("email").value.trim();
+            const password = document.getElementById("password").value;
+            const confirmPassword = document.getElementById("confirmPassword").value;
 
-fetch("footer.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("footer").innerHTML = data);
-</script>
+            if (name === "") {
+                alert("Please enter your full name");
+                return;
+            }
+            const emailPattern = /^[^ ]+@[^ ]+\.[a-z]{2,3}$/;
+            if (!email.match(emailPattern)) {
+                alert("Please enter a valid email address");
+                return;
+            }
+            if (password.length < 6) {
+                alert("Password must be at least 6 characters long");
+                return;
+            }
+            if (password !== confirmPassword) {
+                alert("Passwords do not match");
+                return;
+            }
+            alert("Registration successful 🎉");
+            window.location.href = "index.html";
+
+        });
+    </script>
 
 </body>
+
 </html>
