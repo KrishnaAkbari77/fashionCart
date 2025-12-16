@@ -4,53 +4,97 @@
 <head>
 
     <title>VastraHub</title>
-     <link rel="stylesheet" href="css/product.css">
-    
+    <link rel="stylesheet" href="css/product.css">
+
 </head>
+
 <body>
+<<<<<<< HEAD
        <div id="content"></div> 
        <section>
         <div class="pro-container">
+=======
+    <div id="content"></div>
+    <section>
+        <div class="cart-container">
+>>>>>>> 5ae715aaa93cec0d9e794143c9d37b3e4c04848e
 
-<!-- LEFT -->
-<div class="cart-left">
+            <!-- LEFT -->
+            <div class="cart-left">
 
-<div class="cart-item" data-price="50.99">
-    <img src="images/women/asset21.jpg">
-    <div class="item-info">
-        <h4>H&M MOVE</h4>
-        Fleece Activewear Jacket
-        <div class="price">₹2900</div>
-        <div class="details">Color: Ivory<br>Size: S</div>
+                <div class="cart-item" data-price="50.99">
+                    <img src="images/women/asset21.jpg">
+                    <div class="item-info">
+                        <h4>vastra hub</h4>
+                        Fleece Activewear Jacket
+                        <div class="price">₹2900</div>
+                        <div class="details">Color: Ivory<br>Size: S</div>
 
-        <div class="qty-box">
-            <button onclick="changeQty(this,-1)">−</button>
-            <span class="qty">1</span>
-            <button onclick="changeQty(this,1)">+</button>
-            <span>  <i class="fa-solid fa-trash-can" onclick="confirmDelete(this)"></i></span>
-           
+                        <div class="qty-box">
+                            <button onclick="changeQty(this,-1)">−</button>
+                            <span class="qty">1</span>
+                            <button onclick="changeQty(this,1)">+</button>
+                            <span> <i class="fa-solid fa-trash-can" onclick="confirmDelete(this)"></i></span>
+
+                        </div>
+                    </div>
+                </div>
+
+                <div class="cart-item" data-price="41.99">
+                    <img src="images/men/asset03.jpg">
+                    <div class="item-info">
+                        <h4>vastra hub</h4>
+                        Regular-Fit Turtleneck Sweater
+                        <div class="price">₹2100</div>
+                        <div class="details">Color: Cream<br>Size: M</div>
+
+                        <div class="qty-box">
+                            <button onclick="changeQty(this,-1)">−</button>
+                            <span class="qty">1</span>
+                            <button onclick="changeQty(this,1)">+</button>
+                            <span> <i class="fa-solid fa-trash-can" onclick="confirmDelete(this)"></i></span>
+
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+            <!-- RIGHT -->
+            <div class="cart-right">
+                <div class="summary-row">
+                    <span>Order value</span>
+                    <span id="orderValue">$109.98</span>
+                </div>
+                <div class="summary-row discount">
+                    <span>Discount</span>
+                    <span>−$17.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping</span>
+                    <span>Free</span>
+                </div>
+                <div class="summary-row total">
+                    <span>TOTAL</span>
+                    <span id="total">$92.98</span>
+                </div>
+
+                <button class="btn">CONTINUE TO CHECKOUT</button>
+
+            </div>
+
         </div>
-    </div>
-</div>
 
-<div class="cart-item" data-price="41.99">
-    <img src="images/men/asset03.jpg">
-    <div class="item-info">
-        <h4>H&M</h4>
-        Regular-Fit Turtleneck Sweater
-        <div class="price">₹2100</div>
-        <div class="details">Color: Cream<br>Size: M</div>
-
-        <div class="qty-box">
-            <button onclick="changeQty(this,-1)">−</button>
-            <span class="qty">1</span>
-            <button onclick="changeQty(this,1)">+</button>
-          <span>  <i class="fa-solid fa-trash-can" onclick="confirmDelete(this)"></i></span>
-           
+        <!-- DIALOG -->
+        <div class="dialog-overlay" id="dialog">
+            <div class="dialog">
+                <p>Remove this item from cart?</p>
+                <button onclick="deleteItem()">Delete</button>
+                <button onclick="closeDialog()">Cancel</button>
+            </div>
         </div>
-    </div>
-</div>
 
+<<<<<<< HEAD
 </div>
 
 <!-- RIGHT -->
@@ -96,53 +140,65 @@
         .then(data => {
             document.getElementById("content").innerHTML = data;
         });
+=======
+    </section>
+    <div id="footer"></div>
+    <script>
+        //header
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("content").innerHTML = data;
+            });
+>>>>>>> 5ae715aaa93cec0d9e794143c9d37b3e4c04848e
 
         //cart
         let itemToDelete = null;
 
-function changeQty(btn, change){
-    let qtySpan = btn.parentElement.querySelector(".qty");
-    let qty = parseInt(qtySpan.innerText);
-    qty += change;
+        function changeQty(btn, change) {
+            let qtySpan = btn.parentElement.querySelector(".qty");
+            let qty = parseInt(qtySpan.innerText);
+            qty += change;
 
-    if(qty < 1){
-        confirmDelete(btn);
-        return;
-    }
-    qtySpan.innerText = qty;
-    updateTotal();
-}
+            if (qty < 1) {
+                confirmDelete(btn);
+                return;
+            }
+            qtySpan.innerText = qty;
+            updateTotal();
+        }
 
-function confirmDelete(el){
-    itemToDelete = el.closest(".cart-item");
-    document.getElementById("dialog").style.display="flex";
-}
+        function confirmDelete(el) {
+            itemToDelete = el.closest(".cart-item");
+            document.getElementById("dialog").style.display = "flex";
+        }
 
-function deleteItem(){
-    itemToDelete.remove();
-    closeDialog();
-    updateTotal();
-}
+        function deleteItem() {
+            itemToDelete.remove();
+            closeDialog();
+            updateTotal();
+        }
 
-function closeDialog(){
-    document.getElementById("dialog").style.display="none";
-}
+        function closeDialog() {
+            document.getElementById("dialog").style.display = "none";
+        }
 
-function updateTotal(){
-    let total = 0;
-    document.querySelectorAll(".cart-item").forEach(item=>{
-        let price = parseFloat(item.dataset.price);
-        let qty = parseInt(item.querySelector(".qty").innerText);
-        total += price * qty;
-    });
-    document.getElementById("orderValue").innerText="$"+total.toFixed(2);
-    document.getElementById("total").innerText="$"+(total-17).toFixed(2);
-}
-   
+        function updateTotal() {
+            let total = 0;
+            document.querySelectorAll(".cart-item").forEach(item => {
+                let price = parseFloat(item.dataset.price);
+                let qty = parseInt(item.querySelector(".qty").innerText);
+                total += price * qty;
+            });
+            document.getElementById("orderValue").innerText = "$" + total.toFixed(2);
+            document.getElementById("total").innerText = "$" + (total - 17).toFixed(2);
+        }
+
         //footer
-         fetch("footer.html")
-        .then(res => res.text())
-        .then(data => document.getElementById("footer").innerHTML = data);
-</script>
-    </body>
-    </html>
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
+</body>
+
+</html>
