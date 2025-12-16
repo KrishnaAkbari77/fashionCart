@@ -9,12 +9,21 @@
 </head>
 
 <body>
+<<<<<<< HEAD
        <div id="content"></div> 
        <section>
         <div class="pro-container">
+<<<<<<< HEAD
     <div id="content"></div>
     <section>
         <div class="cart-container">
+=======
+=======
+    <div id="content"></div>
+    <section>
+        <div class="cart-container">
+>>>>>>> 5ae715aaa93cec0d9e794143c9d37b3e4c04848e
+>>>>>>> 9588b1ac4f43ac5ed3c64f098288a0eec4a36691
 
             <!-- LEFT -->
             <div class="cart-left">
@@ -91,6 +100,7 @@
             </div>
         </div>
 
+<<<<<<< HEAD
 </div>
 
 <!-- RIGHT -->
@@ -136,6 +146,17 @@
         .then(data => {
             document.getElementById("content").innerHTML = data;
         });
+=======
+    </section>
+    <div id="footer"></div>
+    <script>
+        //header
+        fetch("header.html")
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById("content").innerHTML = data;
+            });
+>>>>>>> 5ae715aaa93cec0d9e794143c9d37b3e4c04848e
 
         //cart
         let itemToDelete = null;
