@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register | VastraHub</title>
+
+    <!-- global styles -->
+    <link rel="stylesheet" href="css/all.min.css">
+    <link rel="stylesheet" href="css/fonts.css">
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+
+<body>
+
+<div id="header"></div>
+  <div class="title"><h2>Billing Details</h2></div>
+<div class="pro-container">
+        <form class="checkout-form">
+        <div class="checkout-box">
+            <input type="text" placeholder="Full Name" required>
+            <input type="email" placeholder="Email address" required>
+            <input type="text" placeholder="contact" required>
+            <input type="text" placeholder="address" required>
+              <input type="text" placeholder="City" required>
+          
+    </div>
+    <div class="checkout-box">      
+          
+            <input type="number" placeholder="Pincode" required>
+            <div class="detail">
+            <h3>Product:</h3>Fine-knit one-shoulder top<br><br>
+          <h3>  Qty    :</h3>2<br><br>
+            <h3>TOTAL:</h3>4000<br><br>
+            </div>
+           
+            <button type="submit" class="btn checkout-btn">Place Order</button>
+       
+
+    </div>
+    </form> 
+</div>
+
+<div id="footer"></div>
+
+<script>
+fetch("header.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("header").innerHTML = data);
+
+fetch("footer.html")
+    .then(res => res.text())
+    .then(data => document.getElementById("footer").innerHTML = data);
+</script>
+
+</body>
+</html>
