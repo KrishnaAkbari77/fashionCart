@@ -14,53 +14,109 @@
 
     <div id="header"></div>
 
-    <section class="wishlist-section">
-        <div class="container">
-            <h2>My Wishlist</h2>
+    <section>
+        <div class="cart-container">
 
-            <div class="products">
+            <!-- LEFT : WISHLIST ITEMS -->
+            <div class="cart-left">
 
-                <div class="subbox1">
-                    <a href="product_detail.html">
-                        <img src="images/men/asset02.jpg">
-                    </a>
-                    <h5>Casual Wear</h5>
-                    <h5>₹1,299</h5>
-                    <a href="cart.html" class="btn add-cart-btn">Add to Cart</a>
+                <div class="cart-item">
+                    <img src="images/men/asset02.jpg">
+                    <div class="item-info">
+                        <h4>Vastra Hub</h4>
+                        Casual Wear
+                        <div class="price">₹1,299</div>
+
+                        <div class="qty-box">
+                            <a href="cart.html" class="btn small-btn">Move to Cart</a>
+                            <span>
+                                <i class="fa-solid fa-trash-can" onclick="confirmDelete(this)"></i>
+                            </span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="subbox1">
-                    <a href="product_detail.html">
-                        <img src="images/women/asset15.jpg">
-                    </a>
-                    <h5>Minimal Dress</h5>
-                    <h5>₹1,499</h5>
-                    <a href="cart.html" class="btn add-cart-btn">Add to Cart</a>
+                <div class="cart-item">
+                    <img src="images/women/asset15.jpg">
+                    <div class="item-info">
+                        <h4>Vastra Hub</h4>
+                        Minimal Dress
+                        <div class="price">₹1,499</div>
+
+                        <div class="qty-box">
+                            <a href="cart.html" class="btn small-btn">Move to Cart</a>
+                            <span>
+                                <i class="fa-solid fa-trash-can" onclick="confirmDelete(this)"></i>
+                            </span>
+                        </div>
+                    </div>
                 </div>
 
-                <div class="subbox1">
-                    <a href="product_detail.html">
-                        <img src="images/men/asset04.jpg">
-                    </a>
-                    <h5>Street Style</h5>
-                    <h5>₹1,399</h5>
-                    <a href="cart.html" class="btn add-cart-btn">Add to Cart</a>
+                <div class="cart-item">
+                    <img src="images/men/asset08.jpg">
+                    <div class="item-info">
+                        <h4>Vastra Hub</h4>
+                        Street Style
+                        <div class="price">₹1,399</div>
+
+                        <div class="qty-box">
+                            <a href="cart.html" class="btn small-btn">Move to Cart</a>
+                            <span>
+                                <i class="fa-solid fa-trash-can" onclick="confirmDelete(this)"></i>
+                            </span>
+                        </div>
+                    </div>
                 </div>
 
             </div>
+
+            <div class="cart-right">
+                <h3>Wishlist Summary</h3>
+                <p>You can save items here and move them to cart anytime.</p>
+            </div>
+
         </div>
+
+        <!-- DELETE CONFIRM DIALOG -->
+        <div class="dialog-overlay" id="dialog">
+            <div class="dialog">
+                <p>Remove this item from wishlist?</p>
+                <button onclick="deleteItem()">Remove</button>
+                <button onclick="closeDialog()">Cancel</button>
+            </div>
+        </div>
+
     </section>
 
     <div id="footer"></div>
 
     <script>
+        /* header */
         fetch("header.html")
             .then(res => res.text())
             .then(data => document.getElementById("header").innerHTML = data);
 
+        /* footer */
         fetch("footer.html")
             .then(res => res.text())
             .then(data => document.getElementById("footer").innerHTML = data);
+
+        /* wishlist remove logic (same style as cart) */
+        let itemToDelete = null;
+
+        function confirmDelete(el) {
+            itemToDelete = el.closest(".cart-item");
+            document.getElementById("dialog").style.display = "flex";
+        }
+
+        function deleteItem() {
+            itemToDelete.remove();
+            closeDialog();
+        }
+
+        function closeDialog() {
+            document.getElementById("dialog").style.display = "none";
+        }
     </script>
 
 </body>
