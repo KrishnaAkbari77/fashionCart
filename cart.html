@@ -9,6 +9,7 @@
 </head>
 
 <body>
+<<<<<<< HEAD
       <div id="content"></div> 
        <section>
         <div class="pro-container">
@@ -23,6 +24,27 @@
             <!-- LEFT -->
             <div class="cart-left">
 
+=======
+<<<<<<< HEAD
+       <div id="content"></div> 
+       <section>
+        <div class="pro-container">
+<<<<<<< HEAD
+    <div id="content"></div>
+    <section>
+        <div class="cart-container">
+=======
+=======
+    <div id="content"></div>
+    <section>
+        <div class="cart-container">
+>>>>>>> 5ae715aaa93cec0d9e794143c9d37b3e4c04848e
+>>>>>>> 9588b1ac4f43ac5ed3c64f098288a0eec4a36691
+
+            <!-- LEFT -->
+            <div class="cart-left">
+
+>>>>>>> 7c6bb07976fbf05d47742bb8ef036809974900dc
                 <div class="cart-item" data-price="50.99">
                     <img src="images/women/asset21.jpg">
                     <div class="item-info">
@@ -95,6 +117,56 @@
             </div>
         </div>
 
+<<<<<<< HEAD
+=======
+<<<<<<< HEAD
+</div>
+
+<!-- RIGHT -->
+<div class="cart-right">
+    <div class="summary-row">
+        <span>Order value</span>
+        <span id="orderValue">$109.98</span>
+    </div>
+    <div class="summary-row discount">
+        <span>Discount</span>
+        <span>−$17.00</span>
+    </div>
+    <div class="summary-row">
+        <span>Shipping</span>
+        <span>Free</span>
+    </div>
+    <div class="summary-row total">
+        <span>TOTAL</span>
+        <span id="total">$92.98</span>
+    </div>
+
+    <button class="btn checkout-btn">CONTINUE TO CHECKOUT</button>
+    
+</div>
+
+</div>
+
+<!-- DIALOG -->
+<div class="dialog-overlay" id="dialog">
+    <div class="dialog">
+        <p>Remove this item from cart?</p>
+        <button onclick="deleteItem()">Delete</button>
+        <button onclick="closeDialog()">Cancel</button>
+    </div>
+</div>
+
+       </section>
+        <div id="footer"></div>
+<script>
+    //header
+    fetch("header.html")
+        .then(response => response.text())
+        .then(data => {
+            document.getElementById("content").innerHTML = data;
+        });
+=======
+>>>>>>> 7c6bb07976fbf05d47742bb8ef036809974900dc
     </section>
     <div id="footer"></div>
     <script>
@@ -104,6 +176,10 @@
             .then(data => {
                 document.getElementById("content").innerHTML = data;
             });
+<<<<<<< HEAD
+=======
+>>>>>>> 5ae715aaa93cec0d9e794143c9d37b3e4c04848e
+>>>>>>> 7c6bb07976fbf05d47742bb8ef036809974900dc
 
         //cart
         let itemToDelete = null;
