@@ -26,7 +26,6 @@ body {
   padding: 0 15px;
 }
 
-
 .d-flex {
   display: flex;
 }
@@ -66,6 +65,8 @@ a {
   padding: auto;
   display: flex;
   justify-content: space-between;
+  padding: 10px 0;
+
 }
 
 .logo a {
@@ -79,30 +80,15 @@ a {
 .header-info a {
   font-size: 15px;
   color: #000;
+  margin-left: 10px;
+}
+.header-info a:hover {
+  color: var(--primary);
 }
 
 .header-info i {
   color: var(--primary) !important;
   margin-right: 5px;
-}
-/* ================= MAIN HEADER ================= */
-
-/* top part */
-.header-top {
-  padding: 10px 0;
-}
-
-.logo a {
-  font-size: 36px;
-  letter-spacing: 6px;
-  color: #000;
-}
-
-/* right info */
-.header-info a {
-  margin-left: 10px;
-  font-size: 16px;
-  color: #000;
 }
 
 .header-info i {
@@ -136,7 +122,7 @@ a {
 }
 
 .menu nav ul li a:hover {
-  color: var(--primary-color);
+  color: var(--primary);
 }
 
 span {
@@ -225,7 +211,7 @@ span {
   transform: translateY(-5px);
 }
 
-/* wishlist heart (minimal) */
+/* wishlist heart*/
 
 .wishlist-btn {
   position: absolute;
@@ -421,17 +407,18 @@ span {
 
 /* -------cart---------- */
 
-
 /* LEFT */
-.cart-left{ width:65%;
-background: #fff;
-padding: 20px;
+.cart-left {
+  width: 65%;
+  background: #fff;
+  padding: 20px;
 }
 
-.cart-item{
-    display:flex;
-    gap:20px;
-    padding:20px 0;}
+.cart-item {
+  display: flex;
+  gap: 20px;
+  padding: 20px 0;
+}
 .cart-container {
   max-width: 1200px;
   margin: 30px auto;
@@ -444,7 +431,6 @@ padding: 20px;
 /* LEFT */
 .cart-left {
   width: 65%;
-
 }
 
 .cart-item {
@@ -491,24 +477,25 @@ padding: 20px;
 
 /* RIGHT */
 
-.cart-right{
-    width:35%;
-    border-left:1px solid #ddd;
-    padding:20px;
-    background: #fff;
+.cart-right {
+  width: 35%;
+  border-left: 1px solid #ddd;
+  padding: 20px;
+  background: #fff;
 }
 
-
-.summary-row{
-    display:flex;
-    justify-content:space-between;
-    margin:10px 0;
-    font-size:14px;
+.summary-row {
+  display: flex;
+  justify-content: space-between;
+  margin: 10px 0;
+  font-size: 14px;
 }
-.checkout-btn{
-   width: 100%;
+.checkout-btn {
+  width: 100%;
 }
-.discount{ color:#d32f2f; }
+.discount {
+  color: #d32f2f;
+}
 
 .cart-right {
   width: 35%;
@@ -556,33 +543,18 @@ padding: 20px;
   cursor: pointer;
 }
 
-/* RESPONSIVE */
-@media (max-width: 900px) {
-  .cart-container {
-    flex-direction: column;
-  }
-  .cart-left,
-  .cart-right {
-    width: 100%;
-    border: none;
-    padding: 0;
-  }
-}
-
 
 /* checkout */
 
-.checkout-box{
-   width:50%;
-background: #fff;
-padding: 20px;
-
+.checkout-box {
+  width: 50%;
+  background: #fff;
+  padding: 20px;
 }
-.checkout-form{
-    display:flex;
-    
+.checkout-form {
+  display: flex;
 }
-.checkout-box input{
+.checkout-box input {
   width: 100%;
   padding: 12px;
   margin-bottom: 15px;
@@ -593,10 +565,9 @@ padding: 20px;
 .checkout-box input:focus {
   outline: none;
   border-color: var(--primary);
-
 }
 
-.title{
+.title {
   padding-top: 35px;
   text-align: center;
 }
@@ -657,9 +628,8 @@ padding: 20px;
 }
 
 .footer-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
+  display: flex;
+  justify-content: space-evenly;
 }
 
 /* footer boxes */
@@ -937,3 +907,136 @@ padding: 20px;
   border-bottom: 1px solid #eee;
   font-size: 14px;
 }
+
+
+/* hamburger */
+.hamburger {
+  display: none;
+  flex-direction: column;
+  gap: 5px;
+  cursor: pointer;
+}
+
+.hamburger span {
+  width: 24px;
+  height: 3px;
+  background: var(--text-dark);
+}
+
+/* ======================================
+   UI POLISH & LIFE (NO THEME CHANGE)
+====================================== */
+
+/* global smoothness */
+* {
+  transition:
+    color 0.25s ease,
+    background-color 0.25s ease,
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+/* ================= HEADER ================= */
+
+.main-header {
+  box-shadow: 0 4px 20px rgba(0,0,0,0.06);
+}
+
+/* menu hover underline */
+.menu nav ul li a {
+  position: relative;
+}
+
+.menu nav ul li a::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: var(--primary);
+  transition: width 0.3s ease;
+}
+
+.menu nav ul li a:hover::after {
+  width: 100%;
+}
+
+/* ================= BUTTONS ================= */
+
+.btn {
+  border-radius: 4px;
+}
+
+.btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 18px rgba(0,0,0,0.15);
+}
+
+/* ================= PRODUCT CARDS ================= */
+
+.subbox1 {
+  border-radius: 6px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.05);
+}
+
+.subbox1:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0,0,0,0.12);
+}
+
+.subbox1 img {
+  border-radius: 4px;
+}
+
+/* ================= WISHLIST HEART ================= */
+
+.wishlist-btn {
+  background: rgba(255,255,255,0.9);
+  padding: 6px;
+  border-radius: 50%;
+}
+
+.wishlist-btn:hover {
+  transform: scale(1.15);
+}
+
+.wishlist-btn.liked {
+  animation: pop 0.3s ease;
+}
+
+@keyframes pop {
+  0% { transform: scale(1); }
+  50% { transform: scale(1.3); }
+  100% { transform: scale(1); }
+}
+
+/* ================= FEATURE BOX ================= */
+
+.feature-box {
+  background: #fff;
+  padding: 30px 20px;
+  border-radius: 6px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+}
+
+.feature-box:hover {
+  transform: translateY(-6px);
+}
+
+/* ================= FOOTER ================= */
+
+.footer {
+  box-shadow: 0 -10px 30px rgba(0,0,0,0.04);
+}
+
+.footer-box ul li a:hover {
+  padding-left: 5px;
+}
+
+/* ================= PAGE FEEL ================= */
+
+html {
+  scroll-behavior: smooth;
+}
+

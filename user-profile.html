@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <title>My Profile | VastraHub</title>
@@ -11,83 +12,84 @@
 
 <body>
 
-<div id="header"></div>
+    <div id="header"></div>
 
-<section class="profile-section">
-    <div class="container profile-layout">
+    <section class="profile-section">
+        <div class="container profile-layout">
 
-        <!-- ===== SIDE PANEL ===== -->
-        <aside class="profile-sidebar">
-            <ul>
-                <li class="active">
-                    <i class="fa-regular fa-user"></i> My Profile
-                </li>
-                <li>
-                    <i class="fa-solid fa-ticket"></i> My Coupons
-                </li>
-                <li>
-                    <i class="fa-solid fa-wallet"></i> My Wallet
-                </li>
-                <li>
-                    <i class="fa-solid fa-box"></i> My Orders
-                </li>
-                <li>
-                    <i class="fa-regular fa-heart"></i> My Wishlist
-                </li>
-                <li>
-                    <i class="fa-regular fa-credit-card"></i> My Saved Payment
-                </li>
-                <li class="logout">
-                    <i class="fa-solid fa-power-off"></i> Log Out
-                </li>
-            </ul>
-        </aside>
+            <!-- ===== SIDE PANEL ===== -->
+            <aside class="profile-sidebar">
+                <ul>
+                    <li class="active">
+                        <i class="fa-regular fa-user"></i> My Profile
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-ticket"></i> My Coupons
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-wallet"></i> My Wallet
+                    </li>
+                    <li>
+                        <i class="fa-solid fa-box"></i> My Orders
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-heart"></i> My Wishlist
+                    </li>
+                    <li>
+                        <i class="fa-regular fa-credit-card"></i> My Saved Payment
+                    </li>
+                    <li class="logout">
+                        <i class="fa-solid fa-power-off"></i> Log Out
+                    </li>
+                </ul>
+            </aside>
 
-        <!-- ===== MAIN CONTENT ===== -->
-        <div class="profile-content">
+            <!-- ===== MAIN CONTENT ===== -->
+            <div class="profile-content">
 
-            <h2>My Profile</h2>
+                <h2>My Profile</h2>
 
-            <div class="profile-box">
-                <div class="info-row">
-                    <span>Full Name</span>
-                    <span>Krishna Akbari</span>
+                <div class="profile-box">
+                    <div class="info-row">
+                        <span>Full Name</span>
+                        <span>Krishna Akbari</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Email</span>
+                        <span>k@email.com</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Phone</span>
+                        <span>+91 9876543210</span>
+                    </div>
+
+                    <div class="info-row">
+                        <span>Address</span>
+                        <span>Ahmedabad, India</span>
+                    </div>
+
+                    <a href="#" class="btn add-cart-btn">Edit Profile</a>
                 </div>
 
-                <div class="info-row">
-                    <span>Email</span>
-                    <span>k@email.com</span>
-                </div>
-
-                <div class="info-row">
-                    <span>Phone</span>
-                    <span>+91 9876543210</span>
-                </div>
-
-                <div class="info-row">
-                    <span>Address</span>
-                    <span>Ahmedabad, India</span>
-                </div>
-
-                <a href="#" class="btn add-cart-btn">Edit Profile</a>
             </div>
 
         </div>
+    </section>
 
-    </div>
-</section>
+    <div id="footer"></div>
 
-<div id="footer"></div>
+    <script>
+        fetch("header.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("header").innerHTML = data);
 
-<script>
-fetch("header.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("header").innerHTML = data);
-
-fetch("footer.html")
-    .then(res => res.text())
-    .then(data => document.getElementById("footer").innerHTML = data);
-</script>
+        fetch("footer.html")
+            .then(res => res.text())
+            .then(data => document.getElementById("footer").innerHTML = data);
+    </script>
 
 </body>
+
 </html>
