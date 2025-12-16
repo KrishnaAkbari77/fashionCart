@@ -420,7 +420,7 @@ span {
 }
 
 /* -------cart---------- */
-<<<<<<< HEAD
+
 
 /* LEFT */
 .cart-left{ width:65%;
@@ -431,8 +431,7 @@ padding: 20px;
 .cart-item{
     display:flex;
     gap:20px;
-    padding:20px 0;
-=======
+    padding:20px 0;}
 .cart-container {
   max-width: 1200px;
   margin: 30px auto;
@@ -445,7 +444,7 @@ padding: 20px;
 /* LEFT */
 .cart-left {
   width: 65%;
->>>>>>> 5ae715aaa93cec0d9e794143c9d37b3e4c04848e
+
 }
 
 .cart-item {
@@ -491,7 +490,7 @@ padding: 20px;
 }
 
 /* RIGHT */
-<<<<<<< HEAD
+
 .cart-right{
     width:35%;
     border-left:1px solid #ddd;
@@ -510,7 +509,7 @@ padding: 20px;
    width: 100%;
 }
 .discount{ color:#d32f2f; }
-=======
+
 .cart-right {
   width: 35%;
   border-left: 1px solid #ddd;
@@ -527,7 +526,6 @@ padding: 20px;
 .discount {
   color: #d32f2f;
 }
->>>>>>> 5ae715aaa93cec0d9e794143c9d37b3e4c04848e
 
 .total {
   font-size: 18px;
@@ -571,7 +569,7 @@ padding: 20px;
   }
 }
 
-<<<<<<< HEAD
+
 /* checkout */
 
 .checkout-box{
@@ -603,8 +601,6 @@ padding: 20px;
   text-align: center;
 }
 
-=======
->>>>>>> 5ae715aaa93cec0d9e794143c9d37b3e4c04848e
 /* footer */
 /* ================= FOOTER ================= */
 
