@@ -9,24 +9,17 @@
 
 <body>
     <div id="header"></div>
-
     <section class="support-section">
         <div class="container">
-
             <h2>NEED MORE SUPPORT?</h2>
-
             <p class="support-text">
                 Our dedicated Customer Service Team is here to help you, or for quicker assistance you can explore our
                 FAQ
-                to find the information you need.
-            </p>
-
+                to find the information you need.</p>
             <p class="support-text">
                 You can also use our AI chatbot available 24/7 for quick answers related to orders, delivery, returns,
-                or
-                refunds. If further assistance is required, you will be connected to a live agent during working hours.
-            </p>
-
+                or refunds. If further assistance is required, you will be connected to a live agent during working
+                hours. </p>
             <!-- faq section -->
             <div class="faq-section">
                 <h3>FAQs</h3>
@@ -35,7 +28,6 @@
                         <span>WHERE IS MY REFUND?</span>
                         <span class="icon">+</span>
                     </div>
-
                     <div class="faq-content">
                         <p>
                             Refunds are processed within 7–10 business days after we receive your returned item.
@@ -48,15 +40,12 @@
                         <span>HOW DO I CHANGE MY ORDER?</span>
                         <span class="icon">+</span>
                     </div>
-
                     <div class="faq-content">
                         <p>
                             To change your order, please contact our Customer Service Team as soon as possible.
                             Changes can only be made before the order is shipped.
                         </p>
                     </div>
-
-
                 </div>
                 <div class="faq-box">
                     <div class="faq-item" onclick="toggleFaq(this)">
@@ -71,12 +60,30 @@
                         </p>
                     </div>
                 </div>
-
             </div>
     </section>
 
-    <div id="footer"></div>
+    <!-- ===== CONTACT FORM ===== -->
+    <div class=" container contact-form-wrapper">
+        <h2>Send Us a Message</h2>
+        <p class="form-subtext">
+            Please fill in the form below to get in touch with us.</p>
+        <form class="contact-form">
+            <div class="form-row">
+                <input type="text" placeholder="First name">
+                <input type="text" placeholder="Last name">
+            </div>
 
+            <div class="form-row">
+                <input type="email" placeholder="Email address">
+                <input type="tel" placeholder="Phone number">
+            </div>
+
+            <textarea placeholder="Message"></textarea>
+            <button type="submit" class="btn">Submit</button>
+        </form>
+    </div>
+    <div id="footer"></div>
 
     <script>
         function toggleFaq(item) {
@@ -99,8 +106,6 @@
             .then(res => res.text())
             .then(data => document.getElementById("footer").innerHTML = data);
     </script>
-
-
 </body>
 
 </html>
