@@ -26,6 +26,9 @@
   }
 
   /*  menu layout */
+  .menu{
+    padding:5px;
+  }
   .menu nav ul {
     flex-direction: row;
   }
