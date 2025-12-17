@@ -7,10 +7,9 @@
 </head>
 
 <body>
-    <!-- header---->
+    <!------------ header -------------->
     <div id="header"></div>
-
-    <!-- ================= HERO BANNER ================= -->
+    <!------------ banner -------------->
     <section class="bannerbg-img">
         <div class="container">
             <div class="banner-content">
@@ -21,8 +20,7 @@
             </div>
         </div>
     </section>
-
-    <!-- ================= CATEGORIES ================= -->
+    <!------------ categories ------------>
     <section class="category-section">
         <div class="banner-data d-flex">
             <div class="img1">
@@ -53,8 +51,7 @@
             </div>
         </div>
     </section>
-
-    <!-- ================= FEATURES ================= -->
+    <!------------ features --------------->
     <section class="features">
         <div class="container d-flex justify-content">
             <div class="feature-box">
@@ -71,8 +68,7 @@
             </div>
         </div>
     </section>
-
-    <!-- ================= NEW ARRIVALS ================= -->
+    <!------------ new arrivals------------>
     <section class="trending-products">
         <div class="container">
             <h1>New Arrivals</h1>
@@ -202,8 +198,7 @@
             </div>
         </div>
     </section>
-
-    <!-- ================= PARALLAX ================= -->
+    <!------------ parallax banner --------->
     <section class="parallax-banner">
         <div class="parallax-content">
             <h2>Season Sale</h2>
@@ -211,8 +206,7 @@
             <a href="women.html" class="btn">Explore</a>
         </div>
     </section>
-
-    <!-- ================= NEWSLETTER ================= -->
+    <!------------ newsletter -------------->
     <section class="newsletter">
         <div class="container">
             <h2>Subscribe Newsletter</h2>
@@ -221,13 +215,11 @@
             <button class="btn">Subscribe</button>
         </div>
     </section>
-
-    <!-- ================= FOOTER ================= -->
+    <!---------------- footer -------------->
     <div id="footer"></div>
 
-
     <script>
-        /* load header */
+        /* ----- load header ------ */
         fetch("header.html")
             .then(res => res.text())
             .then(data => document.getElementById("header").innerHTML = data);
@@ -244,5 +236,4 @@
         }
     </script>
 </body>
-
 </html>

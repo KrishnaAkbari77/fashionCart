@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <title>My Profile | VastraHub</title>
@@ -10,8 +9,7 @@
     <div id="header"></div>
     <section class="profile-section">
         <div class="container profile-layout">
-
-            <!-- ===== SIDE PANEL ===== -->
+            <!-- ----------- side panel ------------ -->
             <aside class="profile-sidebar">
                 <ul>
                     <li class="active">
@@ -37,41 +35,31 @@
                     </li>
                 </ul>
             </aside>
-
-            <!-- ===== MAIN CONTENT ===== -->
+            <!-- ---------- main content ----------- -->
             <div class="profile-content">
-
                 <h2>My Profile</h2>
-
                 <div class="profile-box">
                     <div class="info-row">
                         <span>Full Name</span>
                         <span>Krishna Akbari</span>
                     </div>
-
                     <div class="info-row">
                         <span>Email</span>
                         <span>k@email.com</span>
                     </div>
-
                     <div class="info-row">
                         <span>Phone</span>
                         <span>+91 9876543210</span>
                     </div>
-
                     <div class="info-row">
                         <span>Address</span>
                         <span>Ahmedabad, India</span>
                     </div>
-
                     <a href="#" class="btn add-cart-btn">Edit Profile</a>
                 </div>
-
             </div>
-
         </div>
     </section>
-
     <div id="footer"></div>
 
     <script>
@@ -83,7 +71,5 @@
             .then(res => res.text())
             .then(data => document.getElementById("footer").innerHTML = data);
     </script>
-
 </body>
-
 </html>

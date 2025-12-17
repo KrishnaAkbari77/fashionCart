@@ -7,14 +7,11 @@
 </head>
 
 <body>
-
     <div id="header"></div>
     <section>
         <div class="cart-container">
-
-            <!-- LEFT : WISHLIST ITEMS -->
+            <!-- ------ left side ------ -->
             <div class="cart-left">
-
                 <div class="cart-item">
                     <img src="images/men/asset02.jpg">
                     <div class="item-info">
@@ -30,7 +27,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="cart-item">
                     <img src="images/women/asset15.jpg">
                     <div class="item-info">
@@ -46,7 +42,6 @@
                         </div>
                     </div>
                 </div>
-
                 <div class="cart-item">
                     <img src="images/men/asset08.jpg">
                     <div class="item-info">
@@ -64,15 +59,12 @@
                 </div>
 
             </div>
-
             <div class="cart-right">
                 <h3>Wishlist Summary</h3>
                 <p>You can save items here and move them to cart anytime.</p>
             </div>
-
         </div>
-
-        <!-- DELETE CONFIRM DIALOG -->
+        <!-- delete confirm -->
         <div class="dialog-overlay" id="dialog">
             <div class="dialog">
                 <p>Remove this item from wishlist?</p>
@@ -80,7 +72,6 @@
                 <button onclick="closeDialog()">Cancel</button>
             </div>
         </div>
-
     </section>
 
     <div id="footer"></div>
@@ -113,7 +104,5 @@
             document.getElementById("dialog").style.display = "none";
         }
     </script>
-
 </body>
-
 </html>
