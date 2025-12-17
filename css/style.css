@@ -1024,7 +1024,7 @@ span {
   transform: translateY(-6px);
 }
 
-/* ================= FOOTER ================= */
+/* footer */
 
 .footer {
   box-shadow: 0 -10px 30px rgba(0,0,0,0.04);
@@ -1034,8 +1034,7 @@ span {
   padding-left: 5px;
 }
 
-/* ================= PAGE FEEL ================= */
-
+/* page reel  */
 html {
   scroll-behavior: smooth;
 }
