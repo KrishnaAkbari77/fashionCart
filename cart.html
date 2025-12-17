@@ -21,7 +21,7 @@
                     <div class="item-info">
                         <h4>vastra hub</h4>
                         Fleece Activewear Jacket
-                        <div class="price">₹2900</div>
+                        <div class="price">2900</div>
                         <div class="details">Color: Ivory<br>Size: S</div>
 
                         <div class="qty-box">
@@ -39,7 +39,7 @@
                     <div class="item-info">
                         <h4>vastra hub</h4>
                         Regular-Fit Turtleneck Sweater
-                        <div class="price">₹2100</div>
+                        <div class="price">2100</div>
                         <div class="details">Color: Cream<br>Size: M</div>
 
                         <div class="qty-box">
@@ -58,11 +58,11 @@
             <div class="cart-right">
                 <div class="summary-row">
                     <span>Order value</span>
-                    <span id="orderValue">$109.98</span>
+                    <span id="orderValue">₹5000</span>
                 </div>
                 <div class="summary-row discount">
                     <span>Discount</span>
-                    <span>−$17.00</span>
+                    <span>−₹1700.00</span>
                 </div>
                 <div class="summary-row">
                     <span>Shipping</span>
@@ -70,7 +70,7 @@
                 </div>
                 <div class="summary-row total">
                     <span>TOTAL</span>
-                    <span id="total">$92.98</span>
+                    <span id="total">₹3300</span>
                 </div>
 
                 <button class="btn checkout-btn"><a href="checkout.html"> CONTINUE TO CHECKOUT</a> 
@@ -133,12 +133,12 @@
         function updateTotal() {
             let total = 0;
             document.querySelectorAll(".cart-item").forEach(item => {
-                let price = parseFloat(item.dataset.price);
+                let price = parseFloat(item.querySelector(".price").innerText);
                 let qty = parseInt(item.querySelector(".qty").innerText);
                 total += price * qty;
             });
-            document.getElementById("orderValue").innerText = "$" + total.toFixed(2);
-            document.getElementById("total").innerText = "$" + (total - 17).toFixed(2);
+            document.getElementById("orderValue").innerText = "₹" + total.toFixed(2);
+            document.getElementById("total").innerText = "₹" + (total - 1700).toFixed(2);
         }
 
         //footer

@@ -60,7 +60,7 @@
             </div>
             <div class="buttons">
             <a href="cart.html" class="btn cart-btn">  <i class="fa-solid fa-cart-shopping"></i> Add to Cart</a>
-            <a href="wishlist.html" class="btn wishlst-btn"><i class="fa-solid fa-heart"></i> Wishlist</a>
+            <a class="btn wishlst-btn" onclick="likeProduct(this)"><i class="fa-solid fa-heart"></i> Wishlist</a>
            
             
             </div>
@@ -81,13 +81,20 @@
 
     /* Image  */
 function changeImg(img) {
-    document.getElementById("mainImg").src = img.src;
-}
+    document.getElementById("maiImg").src = img.src;
+}n
 
 function selectSize(btn) {
     document.querySelectorAll(".size-box button").forEach(b => b.classList.remove("active"));
     btn.classList.add("active");
 }
+
+function likeProduct(btn) {
+            if (!btn.classList.contains("liked")) {
+                btn.classList.add("liked");
+                alert("Added to wishlist ❤️");
+            }
+        }
     /* load footer */
     fetch("footer.html")
         .then(res => res.text())
