@@ -1,44 +1,44 @@
+@media (max-width: 360px) {
+  .footer-box h3 {
+    font-size: 16px;
+  }
+
+  .footer-box ul li {
+    font-size: 13px;
+  }
+}
 @media (max-width: 550px) {
   .header-top {
     display: flex;
     align-items: center;
     justify-content: space-evenly;
   }
-
-  /* show hamburger */
   .hamburger {
     display: flex;
   }
-
-  /* icons only (hide text) */
   .header-info a {
     font-size: 0;
     margin-left: 10px;
   }
-
   .header-info a i {
     font-size: 16px;
   }
-  .logo a{
+  .logo a {
     font-size: 26px;
     letter-spacing: 3px;
     margin-left: 10px;
   }
-
-  /*  menu layout */
-  .menu{
-    padding:5px;
+  .menu {
+    padding: 5px;
   }
   .menu nav ul {
     flex-direction: row;
   }
-
   .menu nav ul li {
     margin: 7px 5px;
   }
-
   .menu nav ul li a {
-    font-size: 14px;
+    font-size: 12px;
     width: 100%;
   }
   /* ------------banner ----------- */
@@ -49,7 +49,6 @@
     padding: 5px;
     font-size: 10px;
   }
-
   /* -----------data content: --------- */
   .data-content {
     height: 60px;
@@ -60,8 +59,7 @@
   .data-content a {
     padding: 5px;
   }
-
-  /* wishlist */
+  /* ------wishlist------ */
   .qty-box {
     width: 100px;
     font-size: 10px;
@@ -73,15 +71,13 @@
   .price {
     font-size: 14px;
   }
-
-  /*  footer  */
+  /* ------ footer ------------  */
   /* desktop (default stays same) */
   .footer-grid {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 20px;
   }
-
   .footer-links {
     padding: 30px 0;
   }
@@ -92,40 +88,33 @@
     margin: 20px;
     gap: 20px;
   }
-
-  /* sidebar */
+  /*---- sidebar---- */
   .profile-sidebar {
     width: 100%;
   }
-
   .profile-sidebar ul li {
     padding: 14px 16px;
     font-size: 14px;
   }
-
   .profile-sidebar ul li i {
     font-size: 16px;
   }
-
-  /* main content */
+  /* ----- main content ------- */
   .profile-content {
     width: 100%;
     padding: 20px;
   }
-
   .profile-content h2 {
     font-size: 20px;
     margin-bottom: 20px;
   }
-
-  /* info rows */
+  /*-------- info rows------ */
   .profile-box .info-row {
     flex-direction: column;
     align-items: flex-start;
     gap: 6px;
     font-size: 14px;
   }
-
   /* edit button */
   .profile-box .btn {
     width: 100%;
@@ -138,12 +127,10 @@
       grid-template-columns: repeat(2, 1fr);
       gap: 30px;
     }
-
     .footer-box h3 {
       font-size: 18px;
     }
   }
-
   /* ---------------- MOBILE ---------------- */
   @media (max-width: 600px) {
     .footer-grid {
@@ -151,34 +138,28 @@
       gap: 25px;
       text-align: center;
     }
-
     .footer-box {
       width: 100%;
     }
-
     .footer-box ul {
       padding: 0;
     }
-
     .footer-box ul li {
       justify-content: center;
       font-size: 14px;
     }
-
     .footer-box ul li i {
       margin-right: 6px;
     }
 
-    /* footer top */
+    /*---- footer top ------*/
     .footer-top {
       padding: 40px 15px;
     }
-
     .footer-logo {
       font-size: 26px;
       letter-spacing: 4px;
     }
-
     .footer-social a {
       width: 44px;
       height: 44px;
@@ -186,20 +167,7 @@
       margin: 6px;
     }
   }
-
-  /* ---------------- EXTRA SMALL ---------------- */
-  @media (max-width: 360px) {
-    .footer-box h3 {
-      font-size: 16px;
-    }
-
-    .footer-box ul li {
-      font-size: 13px;
-    }
-  }
 }
-
-/* RESPONSIVE */
 @media (max-width: 900px) {
   .cart-container {
     flex-direction: column;
